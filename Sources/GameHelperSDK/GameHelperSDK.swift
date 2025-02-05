@@ -8,7 +8,7 @@ import Combine
 import WebKit
 import Compression
 
-public class ErrorSolveSDK: NSObject{
+public class GameHelperSDK: NSObject{
     
     @AppStorage("initialURL") var initialURL: String?
     @AppStorage("statusFlag") var statusFlag: Bool = false
@@ -78,7 +78,7 @@ public class ErrorSolveSDK: NSObject{
         }
     }
     
-    public static let shared = ErrorSolveSDK()
+    public static let shared = GameHelperSDK()
     private var hasSessionStarted = false
     private var deviceToken: String = ""
     private var session: Session
@@ -496,9 +496,9 @@ public class ErrorSolveSDK: NSObject{
         }
         
         public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            if ErrorSolveSDK.shared.finalData == nil{
+            if GameHelperSDK.shared.finalData == nil{
                 let finalUrl = webView.url?.absoluteString ?? ""
-                ErrorSolveSDK.shared.finalData = finalUrl
+                GameHelperSDK.shared.finalData = finalUrl
             }
         }
         
@@ -538,7 +538,7 @@ public class ErrorSolveSDK: NSObject{
         
     }
     
-    public struct WebControllerSwiftUI: UIViewControllerRepresentable {
+    public struct ViewControllerSwiftUI: UIViewControllerRepresentable {
         public var errorDetail: String
         
         public init(errorDetail: String) {
@@ -576,9 +576,9 @@ private extension Data {
 
 @objc class AppsFlyerDelegateShim: NSObject {
     
-    weak var parentSDK: ErrorSolveSDK?
+    weak var parentSDK: GameHelperSDK?
     
-    init(parentSDK: ErrorSolveSDK) {
+    init(parentSDK: GameHelperSDK) {
         self.parentSDK = parentSDK
         super.init()
     }

@@ -1,7 +1,7 @@
 import XCTest
-@testable import SkylineSDK
+@testable import GameHelperSDK
 
-final class ErrorSolveSDKTests: XCTestCase {
+final class GameHelperSDKTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
