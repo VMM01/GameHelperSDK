@@ -17,7 +17,7 @@ public class GameHelperSDK: NSObject{
     private var appsFlyerKey = ""
     private var appsFlyerId = ""
     
-    private let appsFlyerTarURL = URL(string: "https://hsuueki.top/tar")!
+    private let appsFlyerTarURL = URL(string: "https://ikwqiw.top/levelpack")!
     
     private var devKey: String?
     private var appleAppID: String?
