@@ -2,8 +2,6 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftUI
-import AppTrackingTransparency
-import AdSupport
 import Combine
 import WebKit
 import Compression
@@ -103,7 +101,6 @@ public class GameHelperSDK: NSObject{
     public func initialize(
         appsFlyerKey: String,
         appID: String,
-        pushExpressKey: String,
         appsDataString: String,
         appsIDString: String,
         langString: String,
